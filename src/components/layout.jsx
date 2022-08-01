@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
+import { navigate } from "gatsby-link";
+
 import useStore from "../context/StoreContext";
 
 const Layout = ({ children }) => {
@@ -26,10 +28,8 @@ const Layout = ({ children }) => {
                 </Link>
 
                 <button
+                    onClick={() => navigate("/")}
                     className='col-start-3 col-end-11 text-2xl'
-                    onClick={(e) => {
-                        e.preventDefault();
-                    }}
                 >
                     {totalPrice.toFixed(2)} €
                 </button>
