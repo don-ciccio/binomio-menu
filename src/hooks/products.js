@@ -4,7 +4,7 @@ function useAllShopifyProducts() {
     return useStaticQuery(
         graphql`
             query {
-                allShopifyProduct {
+                allShopifyProduct(filter: { status: { eq: ACTIVE } }) {
                     edges {
                         node {
                             productType

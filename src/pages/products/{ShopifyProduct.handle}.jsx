@@ -130,7 +130,7 @@ export default ProductPage;
 
 export const query = graphql`
     query ($id: String!) {
-        shopifyProduct(id: { eq: $id }) {
+        shopifyProduct(status: { eq: ACTIVE }, id: { eq: $id }) {
             description
             handle
             featuredImage {
