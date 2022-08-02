@@ -4,6 +4,7 @@ import { navigate } from "gatsby-link";
 
 const ItemView = (props) => {
     const { products, title } = props;
+
     return (
         <>
             <button className='mx-4 my-2' onClick={() => navigate(-1)}>
@@ -15,6 +16,7 @@ const ItemView = (props) => {
             <div className='flex flex-col divide-y-2 divide-gray-300 divide-double'>
                 {products.map((i) => {
                     const withVariations = i.priceRangeV2.length > 1;
+
                     return (
                         <Link to={`/products/${i.handle}`} key={i.shopifyId}>
                             <div className='min-h-16 w-full p-4 grid grid-cols-4 hover:bg-gray-200 cursor-pointer'>
@@ -37,6 +39,7 @@ const ItemView = (props) => {
                                                 </span>
                                             ))}
                                     </h2>
+
                                     <p className='text-sm text-gray-800'>
                                         {i.description.length < 300
                                             ? i.description

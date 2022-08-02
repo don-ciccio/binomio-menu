@@ -1,5 +1,7 @@
 import React from "react";
+import FoodView from "../../components/FoodView";
 import ItemView from "../../components/ItemView";
+
 import { graphql } from "gatsby";
 import Layout from "../../components/layout";
 
@@ -7,10 +9,15 @@ const CollectionPage = (props) => {
     const {
         data: { shopifyCollection },
     } = props;
+
     return (
         <>
             <Layout>
-                <ItemView {...shopifyCollection} />
+                {shopifyCollection && shopifyCollection.title === "Menu" ? (
+                    <FoodView {...shopifyCollection} />
+                ) : (
+                    <ItemView {...shopifyCollection} />
+                )}
             </Layout>
         </>
     );
@@ -39,6 +46,7 @@ export const query = graphql`
                 shopifyId
                 title
                 description
+                productType
             }
             shopifyId
             title
