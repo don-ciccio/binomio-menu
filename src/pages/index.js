@@ -23,7 +23,7 @@ const IndexPage = () => {
                         <h1 className='text-3xl text-center mb-4'>
                             {metadata.restaurantName}
                         </h1>
-                        <p className='px-4 mb-4 text-gray-800 text-sm'>
+                        <p className='text-base px-4 mb-4 text-gray-800'>
                             {metadata.restaurantDescription}
                         </p>
                     </div>
