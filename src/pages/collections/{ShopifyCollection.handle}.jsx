@@ -27,7 +27,10 @@ export default CollectionPage;
 
 export const query = graphql`
     query ($id: String!) {
-        shopifyCollection(id: { eq: $id }) {
+        shopifyCollection(
+            id: { eq: $id }
+            products: { elemMatch: { status: { eq: ACTIVE } } }
+        ) {
             description
             products {
                 tags
