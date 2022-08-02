@@ -4,9 +4,11 @@ import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 import CategoryView from "../components/CategoryView";
 import { useAllShopifyCollection } from "../hooks/collections";
+import { useSiteMetadata } from "../hooks/use-site-metadata";
 
 const IndexPage = () => {
     const { allShopifyCollection } = useAllShopifyCollection();
+    const metadata = useSiteMetadata();
     return (
         <Layout>
             <>
@@ -19,10 +21,10 @@ const IndexPage = () => {
                             />
                         </div>
                         <h1 className='text-3xl text-center mb-4'>
-                            Binomio Beer and Wine
+                            {metadata.restaurantName}
                         </h1>
                         <p className='px-4 mb-4 text-gray-800 text-sm'>
-                            Via Agliana 18/20 Roma
+                            {metadata.restaurantDescription}
                         </p>
                     </div>
                     <div className='flex flex-col divide-y-2 divide-gray-300 divide-double'>
@@ -32,6 +34,57 @@ const IndexPage = () => {
                                 category={collection.node}
                             />
                         ))}
+                    </div>
+                    <p className='text-gray-700 text-sm text-center mt-4 mb-8 px-4'>
+                        {metadata.restaurantFooter}
+                    </p>
+                    <div className='flex flex-row justify-evenly mb-2'>
+                        {Boolean(
+                            metadata.instagramLink &&
+                                metadata.instagramLink.trim()
+                        ) && (
+                            <a
+                                href={metadata.instagramLink}
+                                rel='nofollow noreferrer'
+                                target='_blank'
+                            >
+                                <img src='/instagram.svg' alt='Instagram' />
+                            </a>
+                        )}
+                        {Boolean(
+                            metadata.facebookLink &&
+                                metadata.facebookLink.trim()
+                        ) && (
+                            <a
+                                href={metadata.facebookLink}
+                                rel='nofollow noreferrer'
+                                target='_blank'
+                            >
+                                <img src='/facebook.svg' alt='Facebook' />
+                            </a>
+                        )}
+                        {Boolean(
+                            metadata.twitterLink && metadata.twitterLink.trim()
+                        ) && (
+                            <a
+                                href={metadata.twitterLink}
+                                rel='nofollow noreferrer'
+                                target='_blank'
+                            >
+                                <img src='/twitter.svg' alt='Twitter' />
+                            </a>
+                        )}
+                        {Boolean(
+                            metadata.websiteLink && metadata.websiteLink.trim()
+                        ) && (
+                            <a
+                                href={metadata.websiteLink}
+                                rel='nofollow noreferrer'
+                                target='_blank'
+                            >
+                                <img src='/globe.svg' alt='Website' />
+                            </a>
+                        )}
                     </div>
                 </div>
             </>
