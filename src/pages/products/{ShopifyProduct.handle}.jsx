@@ -5,7 +5,7 @@ import Layout from "../../components/layout";
 import { navigate } from "gatsby-link";
 
 const ProductPage = (props) => {
-    const [selectedVariation, setSelectedVariation] = useState("");
+    const [selectedVariation, setSelectedVariation] = useState([]);
     const [selectedOptions, setSelectedOptions] = useState(0);
     const [quantity, setQuantity] = useState(1);
     const notesInput = useRef(null);

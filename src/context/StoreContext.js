@@ -112,12 +112,13 @@ export const StoreProvider = ({ children }) => {
                         product: { ...itemIsInCart.product },
                         quantity: itemIsInCart.quantity + parsedQuantity,
                         notes: itemIsInCart.notes,
-                        selectedVariation: itemIsInCart.selectedVariation,
+                        selectedVariation: [itemIsInCart.selectedVariation],
                     };
                     const otherItems = cart.filter(
                         (item) =>
                             item.product?.variants[0].shopifyId !== variantId
                     );
+
                     updatedCart = [...otherItems, newProduct];
                 } else {
                     updatedCart = cart.concat([
