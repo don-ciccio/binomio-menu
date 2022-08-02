@@ -6,6 +6,7 @@ import { navigate } from "gatsby-link";
 
 const ProductPage = (props) => {
     const [selectedVariation, setSelectedVariation] = useState("");
+    const [selectedOptions, setSelectedOptions] = useState(0);
     const [quantity, setQuantity] = useState(1);
     const notesInput = useRef(null);
     const { addVariantToCart } = useStore();
@@ -55,9 +56,10 @@ const ProductPage = (props) => {
                                     className='min-h-16 w-full p-4 grid grid-cols-8 hover:bg-gray-200 cursor-pointer'
                                     onClick={() => {
                                         setSelectedVariation(v);
+                                        setSelectedOptions(i);
                                     }}
                                 >
-                                    {selectedVariation === v && (
+                                    {selectedOptions === i && (
                                         <img src='/check.svg' alt='Selected' />
                                     )}
                                     <div className='col-start-2 col-end-7 text-left'>

@@ -68,7 +68,12 @@ export const StoreProvider = ({ children }) => {
         initializeCheckout();
     }, []);
 
-    const addVariantToCart = async (product, quantity, notes) => {
+    const addVariantToCart = async (
+        product,
+        quantity,
+        notes,
+        selectedVariation
+    ) => {
         setLoading(true);
 
         if (checkout.id === "") {
@@ -107,6 +112,7 @@ export const StoreProvider = ({ children }) => {
                         product: { ...itemIsInCart.product },
                         quantity: itemIsInCart.quantity + parsedQuantity,
                         notes: itemIsInCart.notes,
+                        selectedVariation: itemIsInCart.selectedVariation,
                     };
                     const otherItems = cart.filter(
                         (item) =>
@@ -115,12 +121,22 @@ export const StoreProvider = ({ children }) => {
                     updatedCart = [...otherItems, newProduct];
                 } else {
                     updatedCart = cart.concat([
-                        { product, quantity: parsedQuantity, notes: notes },
+                        {
+                            product,
+                            quantity: parsedQuantity,
+                            notes: notes,
+                            selectedVariation: selectedVariation,
+                        },
                     ]);
                 }
             } else {
                 updatedCart = [
-                    { product, quantity: parsedQuantity, notes: notes },
+                    {
+                        product,
+                        quantity: parsedQuantity,
+                        notes: notes,
+                        selectedVariation: selectedVariation,
+                    },
                 ];
             }
 

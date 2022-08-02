@@ -6,7 +6,7 @@ import groupBy from "../utils/functions";
 const ItemView = (props) => {
     const { products, title } = props;
     let menu = groupBy(products, "productType");
-    console.log(menu);
+
     return (
         <>
             <button className='mx-4 my-2' onClick={() => navigate(-1)}>

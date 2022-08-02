@@ -27,7 +27,8 @@ const CartView = () => {
                                 >
                                     <div className='w-full col-start-1 col-end-5'>
                                         <h2 className='text-xl self-center block w-full'>
-                                            {i.product.title}
+                                            {i.product.title} (
+                                            {i.selectedVariation})
                                         </h2>
                                         {Boolean(i.notes && i.notes.length) && (
                                             <p className='text-sm text-gray-800'>
