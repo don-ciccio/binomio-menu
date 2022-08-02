@@ -85,7 +85,7 @@ const ItemView = (props) => {
                     Bruschette
                 </h2>
                 {menu.Bruschette.map((i) => {
-                    const withVariations = i.priceRangeV2.length > 1;
+                    const withVariations = i.options[0].values.length > 1;
 
                     return (
                         <Link to={`/products/${i.handle}`} key={i.shopifyId}>
@@ -118,7 +118,7 @@ const ItemView = (props) => {
                                     </p>
                                     {withVariations ? (
                                         <span className='bg-black text-white px-2 py-1 rounded-md'>
-                                            {i.priceRangeV2.length} options
+                                            {i.options[0].values.length} options
                                         </span>
                                     ) : (
                                         <p className='text-lg font-bold'>
@@ -150,7 +150,7 @@ const ItemView = (props) => {
                     Hamburger
                 </h2>
                 {menu.Hamburger.map((i) => {
-                    const withVariations = i.priceRangeV2.length > 1;
+                    const withVariations = i.options[0].values.length > 1;
 
                     return (
                         <Link to={`/products/${i.handle}`} key={i.shopifyId}>
@@ -183,7 +183,7 @@ const ItemView = (props) => {
                                     </p>
                                     {withVariations ? (
                                         <span className='bg-black text-white px-2 py-1 rounded-md'>
-                                            {i.priceRangeV2.length} options
+                                            {i.options[0].values.length} options
                                         </span>
                                     ) : (
                                         <p className='text-lg font-bold'>
@@ -215,7 +215,7 @@ const ItemView = (props) => {
                     Piadine
                 </h2>
                 {menu.Piadina.map((i) => {
-                    const withVariations = i.priceRangeV2.length > 1;
+                    const withVariations = i.options[0].values.length > 1;
 
                     return (
                         <Link to={`/products/${i.handle}`} key={i.shopifyId}>
@@ -248,7 +248,7 @@ const ItemView = (props) => {
                                     </p>
                                     {withVariations ? (
                                         <span className='bg-black text-white px-2 py-1 rounded-md'>
-                                            {i.priceRangeV2.length} options
+                                            {i.options[0].values.length} options
                                         </span>
                                     ) : (
                                         <p className='text-lg font-bold'>
@@ -280,7 +280,7 @@ const ItemView = (props) => {
                     Secondi
                 </h2>
                 {menu.Primopiatto.map((i) => {
-                    const withVariations = i.priceRangeV2.length > 1;
+                    const withVariations = i.options[0].values.length > 1;
 
                     return (
                         <Link to={`/products/${i.handle}`} key={i.shopifyId}>
@@ -313,7 +313,7 @@ const ItemView = (props) => {
                                     </p>
                                     {withVariations ? (
                                         <span className='bg-black text-white px-2 py-1 rounded-md'>
-                                            {i.priceRangeV2.length} options
+                                            {i.options[0].values.length} options
                                         </span>
                                     ) : (
                                         <p className='text-lg font-bold'>
@@ -345,7 +345,7 @@ const ItemView = (props) => {
                     Contorni
                 </h2>
                 {menu.Contorni.map((i) => {
-                    const withVariations = i.priceRangeV2.length > 1;
+                    const withVariations = i.options[0].values.length > 1;
 
                     return (
                         <Link to={`/products/${i.handle}`} key={i.shopifyId}>
@@ -378,7 +378,7 @@ const ItemView = (props) => {
                                     </p>
                                     {withVariations ? (
                                         <span className='bg-black text-white px-2 py-1 rounded-md'>
-                                            {i.priceRangeV2.length} options
+                                            {i.options[0].values.length} options
                                         </span>
                                     ) : (
                                         <p className='text-lg font-bold'>
@@ -410,7 +410,7 @@ const ItemView = (props) => {
                     Dolci
                 </h2>
                 {menu.Dolci.map((i) => {
-                    const withVariations = i.priceRangeV2.length > 1;
+                    const withVariations = i.options[0].values.length > 1;
 
                     return (
                         <Link to={`/products/${i.handle}`} key={i.shopifyId}>
@@ -443,7 +443,7 @@ const ItemView = (props) => {
                                     </p>
                                     {withVariations ? (
                                         <span className='bg-black text-white px-2 py-1 rounded-md'>
-                                            {i.priceRangeV2.length} options
+                                            {i.options[0].values.length} options
                                         </span>
                                     ) : (
                                         <p className='text-lg font-bold'>
