@@ -33,7 +33,7 @@ const ItemView = (props) => {
                                             i.tags.map((tag) => (
                                                 <span
                                                     key={tag}
-                                                    className='bg-gray-200 text-base px-2 py-1 mx-2 rounded-lg'
+                                                    className='bg-gray-200 text-base px-2 py-1 mx-2 rounded-lg break-words'
                                                 >
                                                     {tag}
                                                 </span>
