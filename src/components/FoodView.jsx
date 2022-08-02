@@ -6,7 +6,7 @@ import groupBy from "../utils/functions";
 const ItemView = (props) => {
     const { products, title } = props;
     let menu = groupBy(products, "productType");
-
+    console.log(menu);
     return (
         <>
             <button className='mx-4 my-2' onClick={() => navigate(-1)}>
@@ -20,7 +20,7 @@ const ItemView = (props) => {
                     Antipasti
                 </h2>
                 {menu.Tagliere.map((i) => {
-                    const withVariations = i.priceRangeV2.length > 1;
+                    const withVariations = i.options[0].values.length > 1;
 
                     return (
                         <Link to={`/products/${i.handle}`} key={i.shopifyId}>
@@ -53,7 +53,7 @@ const ItemView = (props) => {
                                     </p>
                                     {withVariations ? (
                                         <span className='bg-black text-white px-2 py-1 rounded-md'>
-                                            {i.priceRangeV2.length} options
+                                            {i.options[0].values.length} opzioni
                                         </span>
                                     ) : (
                                         <p className='text-lg font-bold'>

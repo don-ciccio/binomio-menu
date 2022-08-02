@@ -43,6 +43,11 @@ export const query = graphql`
                         currencyCode
                     }
                 }
+                options {
+                    shopifyId
+                    name
+                    values
+                }
                 shopifyId
                 title
                 description

@@ -5,7 +5,7 @@ import Layout from "../../components/layout";
 import { navigate } from "gatsby-link";
 
 const ProductPage = (props) => {
-    const [selectedVariation, setSelectedVariation] = useState(0);
+    const [selectedVariation, setSelectedVariation] = useState("");
     const [quantity, setQuantity] = useState(1);
     const notesInput = useRef(null);
     const { addVariantToCart } = useStore();
@@ -13,7 +13,7 @@ const ProductPage = (props) => {
     const {
         data: { shopifyProduct },
     } = props;
-    const withVariations = shopifyProduct.priceRangeV2.length > 1;
+    const withVariations = shopifyProduct.options[0].values.length > 1;
 
     const addToCart = (e) => {
         e.preventDefault();
@@ -21,8 +21,9 @@ const ProductPage = (props) => {
             notesInput.current && notesInput.current.value.trim().length > 0
                 ? notesInput.current.value.trim()
                 : null;
-        addVariantToCart(shopifyProduct, quantity, notes);
+        addVariantToCart(shopifyProduct, quantity, notes, selectedVariation);
     };
+    console.log(selectedVariation);
     return (
         <Layout>
             <>
@@ -48,20 +49,26 @@ const ProductPage = (props) => {
                     </p>
                     {withVariations ? (
                         <div className='flex flex-col divide-y-2 divide-gray-300 divide-double w-full'>
-                            {shopifyProduct.priceRangeV2.map((v, i) => (
+                            {shopifyProduct.options[0].values.map((v, i) => (
                                 <button
                                     key={i}
                                     className='min-h-16 w-full p-4 grid grid-cols-8 hover:bg-gray-200 cursor-pointer'
                                     onClick={() => {
-                                        setSelectedVariation(i);
+                                        setSelectedVariation(v);
                                     }}
                                 >
-                                    {selectedVariation === i && (
+                                    {selectedVariation === v && (
                                         <img src='/check.svg' alt='Selected' />
                                     )}
-
+                                    <div className='col-start-2 col-end-7 text-left'>
+                                        {v}
+                                    </div>
                                     <div className='col-start-7 col-end-9'>
-                                        {v.amount} €
+                                        {
+                                            shopifyProduct.priceRangeV2
+                                                .maxVariantPrice.amount
+                                        }{" "}
+                                        €
                                     </div>
                                 </button>
                             ))}
