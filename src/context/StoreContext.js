@@ -76,24 +76,24 @@ export const StoreProvider = ({ children }) => {
             return;
         }
 
-        const checkoutID = checkout.id;
+        /* const checkoutID = checkout.id; */
         const variantId = product?.variants[0].shopifyId;
 
         const parsedQuantity = parseInt(quantity, 10);
 
-        const lineItemsToUpdate = [
+        /* const lineItemsToUpdate = [
             {
                 variantId,
                 quantity: parsedQuantity,
             },
-        ];
+        ]; */
 
         try {
-            const res = await client.checkout.addLineItems(
+            /* const res = await client.checkout.addLineItems(
                 checkoutID,
                 lineItemsToUpdate
             );
-            setCheckout(res);
+            setCheckout(res); */
 
             let updatedCart = [];
 
@@ -136,7 +136,7 @@ export const StoreProvider = ({ children }) => {
     const removeLineItem = async (variantId) => {
         setLoading(true);
         try {
-            if (checkout.lineItems.length < 1) throw new Error("Cart is empty");
+            /* if (checkout.lineItems.length < 1) throw new Error("Cart is empty");
 
             let lineItemID = "";
             checkout.lineItems?.forEach((item) => {
@@ -153,9 +153,9 @@ export const StoreProvider = ({ children }) => {
             const res = await client.checkout.removeLineItems(checkout.id, [
                 lineItemID,
             ]);
-            setCheckout(res);
+            setCheckout(res); */
 
-            const updatedCart = cart.filter(
+            let updatedCart = cart.filter(
                 (item) => item.product.variants[0]?.shopifyId !== variantId
             );
 

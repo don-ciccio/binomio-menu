@@ -5,8 +5,8 @@ import groupBy from "../utils/functions";
 
 const ItemView = (props) => {
     const { products, title } = props;
-    let o = groupBy(products, "productType");
-    console.log(o);
+    let menu = groupBy(products, "productType");
+
     return (
         <>
             <button className='mx-4 my-2' onClick={() => navigate(-1)}>
@@ -19,7 +19,7 @@ const ItemView = (props) => {
                 <h2 className='pl-4 font-bold text-2xl self-center block w-full mb-4'>
                     Antipasti
                 </h2>
-                {o.Tagliere.map((i) => {
+                {menu.Tagliere.map((i) => {
                     const withVariations = i.priceRangeV2.length > 1;
 
                     return (
@@ -84,7 +84,7 @@ const ItemView = (props) => {
                 <h2 className='pl-4 font-bold text-2xl self-center block w-full mb-4'>
                     Bruschette
                 </h2>
-                {o.Bruschette.map((i) => {
+                {menu.Bruschette.map((i) => {
                     const withVariations = i.priceRangeV2.length > 1;
 
                     return (
@@ -149,7 +149,7 @@ const ItemView = (props) => {
                 <h2 className='pl-4 font-bold text-2xl self-center block w-full mb-4'>
                     Hamburger
                 </h2>
-                {o.Hamburger.map((i) => {
+                {menu.Hamburger.map((i) => {
                     const withVariations = i.priceRangeV2.length > 1;
 
                     return (
@@ -214,7 +214,7 @@ const ItemView = (props) => {
                 <h2 className='pl-4 font-bold text-2xl self-center block w-full mb-4'>
                     Piadine
                 </h2>
-                {o.Piadina.map((i) => {
+                {menu.Piadina.map((i) => {
                     const withVariations = i.priceRangeV2.length > 1;
 
                     return (
@@ -279,7 +279,7 @@ const ItemView = (props) => {
                 <h2 className='pl-4 font-bold text-2xl self-center block w-full mb-4'>
                     Secondi
                 </h2>
-                {o.Primopiatto.map((i) => {
+                {menu.Primopiatto.map((i) => {
                     const withVariations = i.priceRangeV2.length > 1;
 
                     return (
@@ -344,7 +344,7 @@ const ItemView = (props) => {
                 <h2 className='pl-4 font-bold text-2xl self-center block w-full mb-4'>
                     Contorni
                 </h2>
-                {o.Contorni.map((i) => {
+                {menu.Contorni.map((i) => {
                     const withVariations = i.priceRangeV2.length > 1;
 
                     return (
@@ -409,7 +409,7 @@ const ItemView = (props) => {
                 <h2 className='pl-4 font-bold text-2xl self-center block w-full mb-4'>
                     Dolci
                 </h2>
-                {o.Dolci.map((i) => {
+                {menu.Dolci.map((i) => {
                     const withVariations = i.priceRangeV2.length > 1;
 
                     return (
