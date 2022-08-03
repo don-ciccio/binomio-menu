@@ -171,8 +171,9 @@ export const StoreProvider = ({ children }) => {
                 lineItemID,
             ]);
             setCheckout(res); */
+
             let updatedCart = cart.filter(
-                (item) => item.product.variants[0]?.shopifyId !== variantId
+                (item, i) => item.product.variants[i]?.shopifyId !== variantId
             );
 
             setCart(updatedCart);

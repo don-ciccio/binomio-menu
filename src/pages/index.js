@@ -3,6 +3,8 @@ import { StaticImage } from "gatsby-plugin-image";
 
 import Layout from "../components/layout";
 import CategoryView from "../components/CategoryView";
+import { Seo } from "../components/Seo";
+
 import { useAllShopifyCollection } from "../hooks/collections";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
 
@@ -93,3 +95,5 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+
+export const Head = () => <Seo />;

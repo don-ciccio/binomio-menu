@@ -20,7 +20,7 @@ const CartView = () => {
                     </div>
                     <div className='flex flex-col divide-y-2 divide-gray-300 divide-double'>
                         {cart.length > 0 ? (
-                            cart.map((i) => (
+                            cart.map((i, idx) => (
                                 <div
                                     key={`${i.selectedVariation}`}
                                     className='min-h-16 w-full grid grid-cols-5 p-2'
@@ -64,7 +64,7 @@ const CartView = () => {
                                             className='mr-4'
                                             onClick={() =>
                                                 removeLineItem(
-                                                    i.product.variants[0]
+                                                    i.product.variants[idx]
                                                         ?.shopifyId
                                                 )
                                             }
