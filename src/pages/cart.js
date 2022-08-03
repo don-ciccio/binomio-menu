@@ -22,7 +22,7 @@ const CartView = () => {
                         {cart.length > 0 ? (
                             cart.map((i) => (
                                 <div
-                                    key={`${i.product.shopifyId}`}
+                                    key={`${i.selectedVariation}`}
                                     className='min-h-16 w-full grid grid-cols-5 p-2'
                                 >
                                     <div className='w-full col-start-1 col-end-5'>

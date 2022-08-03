@@ -83,7 +83,7 @@ export const StoreProvider = ({ children }) => {
 
         /* const checkoutID = checkout.id; */
         const variantId = product?.variants[0].shopifyId;
-
+        const optionsValue = product?.options[0].values;
         const parsedQuantity = parseInt(quantity, 10);
 
         /* const lineItemsToUpdate = [
@@ -103,8 +103,8 @@ export const StoreProvider = ({ children }) => {
             let updatedCart = [];
 
             if (cart.length > 0) {
-                const itemIsInCart = cart.find(
-                    (item) => item.product.variants[0].shopifyId === variantId
+                const itemIsInCart = cart.find((item) =>
+                    optionsValue.includes(item)
                 );
 
                 if (itemIsInCart) {
@@ -171,7 +171,6 @@ export const StoreProvider = ({ children }) => {
                 lineItemID,
             ]);
             setCheckout(res); */
-
             let updatedCart = cart.filter(
                 (item) => item.product.variants[0]?.shopifyId !== variantId
             );

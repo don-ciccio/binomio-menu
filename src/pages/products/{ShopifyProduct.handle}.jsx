@@ -5,7 +5,6 @@ import Layout from "../../components/layout";
 import { navigate } from "gatsby-link";
 
 const ProductPage = (props) => {
-    const [selectedVariation, setSelectedVariation] = useState([]);
     const [selectedOptions, setSelectedOptions] = useState(0);
     const [quantity, setQuantity] = useState(1);
     const notesInput = useRef(null);
@@ -15,7 +14,9 @@ const ProductPage = (props) => {
         data: { shopifyProduct },
     } = props;
     const withVariations = shopifyProduct.options[0].values.length > 1;
-
+    const [selectedVariation, setSelectedVariation] = useState([
+        shopifyProduct.options[0].values[0],
+    ]);
     const addToCart = (e) => {
         e.preventDefault();
         const notes =
