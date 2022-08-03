@@ -15,7 +15,6 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "cross-env": "^7.0.3",
     "gatsby": "^4.19.2",
     "gatsby-plugin-image": "^2.19.0",
     "gatsby-plugin-sharp": "^4.19.0",

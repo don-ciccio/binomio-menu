@@ -6,7 +6,7 @@ import Layout from "../components/layout";
 
 const CartView = () => {
     const { cart, removeLineItem } = useStore();
-    console.log(cart);
+
     return (
         <>
             <Layout>
