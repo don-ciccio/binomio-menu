@@ -25,7 +25,7 @@ const ProductPage = (props) => {
                 : null;
         addVariantToCart(shopifyProduct, quantity, notes, selectedVariation);
     };
-    console.log(selectedVariation);
+
     return (
         <Layout>
             <>

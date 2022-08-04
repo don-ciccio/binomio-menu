@@ -20,15 +20,15 @@ const Layout = ({ children }) => {
             </div>
             <div className='font-sans fixed bottom-0 left-0 right-0 h-16 border-t-2 border-gray-200 bg-white grid grid-cols-12'>
                 <Link
-                    to='/cart'
+                    to='/'
                     className='col-start-1 col-end-3 flex items-center justify-center'
                 >
-                    <img src='/shopping-bag.svg' alt='' className='px-4' />
-                    <span className='hidden sm:inline'>Carrello</span>
+                    <img src='/home.svg' alt='' className='px-4' />
+                    <span className='hidden sm:inline'>Home</span>
                 </Link>
 
                 <button
-                    onClick={() => navigate("/")}
+                    onClick={() => navigate("/cart")}
                     className='col-start-3 col-end-11 text-2xl'
                 >
                     {totalPrice.toFixed(2)} €
