@@ -277,7 +277,7 @@ const ItemView = (props) => {
             </div>
             <div className='flex flex-col divide-y-2 divide-gray-300 divide-double'>
                 <h2 className='pl-4 font-bold text-2xl self-center block w-full mb-4'>
-                    Secondi
+                    {menu.Primopiatto ? "Secondi" : ""}
                 </h2>
                 {menu.Primopiatto &&
                     menu.Primopiatto.map((i) => {
