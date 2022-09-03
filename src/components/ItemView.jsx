@@ -28,7 +28,7 @@ const ItemView = (props) => {
                                     }
                                 >
                                     <h2 className='text-xl self-center block w-full mb-1'>
-                                        {i.title}
+                                        {i.title.toUpperCase()}
                                         {Boolean(i.tags.length) &&
                                             i.tags.map((tag) => (
                                                 <span
