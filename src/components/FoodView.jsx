@@ -16,7 +16,7 @@ const ItemView = (props) => {
                 <h1 className='text-3xl text-center'>{title}</h1>
             </div>
             <div className='flex flex-col divide-y-2 divide-gray-300 divide-double'>
-                <h2 className='pl-4 font-bold text-2xl self-center block w-full mb-4'>
+                <h2 className='pl-4 font-bold text-3xl self-center block w-full mb-5'>
                     Antipasti
                 </h2>
                 {menu.Tagliere.map((i) => {
@@ -81,7 +81,7 @@ const ItemView = (props) => {
                 })}
             </div>
             <div className='flex flex-col divide-y-2 divide-gray-300 divide-double'>
-                <h2 className='pl-4 font-bold text-2xl self-center block w-full mb-4'>
+                <h2 className='pl-4 font-bold text-3xl self-center block w-full mb-5'>
                     Bruschette
                 </h2>
                 {menu.Bruschette.map((i) => {
@@ -146,7 +146,7 @@ const ItemView = (props) => {
                 })}
             </div>
             <div className='flex flex-col divide-y-2 divide-gray-300 divide-double'>
-                <h2 className='pl-4 font-bold text-2xl self-center block w-full mb-4'>
+                <h2 className='pl-4 font-bold text-3xl self-center block w-full mb-5'>
                     Hamburger
                 </h2>
                 {menu.Hamburger.map((i) => {
@@ -211,7 +211,7 @@ const ItemView = (props) => {
                 })}
             </div>
             <div className='flex flex-col divide-y-2 divide-gray-300 divide-double'>
-                <h2 className='pl-4 font-bold text-2xl self-center block w-full mb-4'>
+                <h2 className='pl-4 font-bold text-3xl self-center block w-full mb-5'>
                     Piadine
                 </h2>
                 {menu.Piadina.map((i) => {
@@ -276,7 +276,7 @@ const ItemView = (props) => {
                 })}
             </div>
             <div className='flex flex-col divide-y-2 divide-gray-300 divide-double'>
-                <h2 className='pl-4 font-bold text-2xl self-center block w-full mb-4'>
+                <h2 className='pl-4 font-bold text-3xl self-center block w-full mb-5'>
                     {menu.Primopiatto ? "Secondi" : ""}
                 </h2>
                 {menu.Primopiatto &&
@@ -348,7 +348,7 @@ const ItemView = (props) => {
                     })}
             </div>
             <div className='flex flex-col divide-y-2 divide-gray-300 divide-double'>
-                <h2 className='pl-4 font-bold text-2xl self-center block w-full mb-4'>
+                <h2 className='pl-4 font-bold text-3xl self-center block w-full mb-5'>
                     Contorni
                 </h2>
                 {menu.Contorni.map((i) => {
@@ -413,7 +413,7 @@ const ItemView = (props) => {
                 })}
             </div>
             <div className='flex flex-col divide-y-2 divide-gray-300 divide-double'>
-                <h2 className='pl-4 font-bold text-2xl self-center block w-full mb-4'>
+                <h2 className='pl-4 font-bold text-3xl self-center block w-full mb-5'>
                     Dolci
                 </h2>
                 {menu.Dolci.map((i) => {
