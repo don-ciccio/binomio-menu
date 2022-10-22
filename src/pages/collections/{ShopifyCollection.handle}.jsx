@@ -1,6 +1,7 @@
 import React from "react";
 import FoodView from "../../components/FoodView";
 import ItemView from "../../components/ItemView";
+import LiquorView from "../../components/LiquorView";
 
 import { graphql } from "gatsby";
 import Layout from "../../components/layout";
@@ -15,6 +16,9 @@ const CollectionPage = (props) => {
             <Layout>
                 {shopifyCollection && shopifyCollection.title === "Menu" ? (
                     <FoodView {...shopifyCollection} />
+                ) : shopifyCollection &&
+                  shopifyCollection.title === "Distillati" ? (
+                    <LiquorView {...shopifyCollection} />
                 ) : (
                     <ItemView {...shopifyCollection} />
                 )}

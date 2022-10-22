@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import { navigate } from "gatsby-link";
 import groupBy from "../utils/functions";
 
-const ItemView = (props) => {
+const FoodView = (props) => {
     const { products, title } = props;
     let menu = groupBy(products, "productType");
 
@@ -481,4 +481,4 @@ const ItemView = (props) => {
     );
 };
 
-export default ItemView;
+export default FoodView;
