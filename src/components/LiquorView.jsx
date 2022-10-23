@@ -82,7 +82,7 @@ const LiquorView = (props) => {
             </div>
             <div className='flex flex-col divide-y-2 divide-gray-300 divide-double'>
                 <h2 className='pl-4 font-bold text-3xl self-center block w-full mb-5'>
-                    Bourbon
+                    Bourbon & Rye
                 </h2>
                 {distillati.Bourbon.map((i) => {
                     const withVariations = i.options[0].values.length > 1;
