@@ -12,7 +12,7 @@ function useAllShopifyProducts() {
                             handle
                             featuredImage {
                                 altText
-                                gatsbyImageData
+                                src
                                 src
                             }
                             options {

@@ -77,7 +77,7 @@ const SearchView = () => {
                                                     className={
                                                         Boolean(
                                                             p.node.featuredImage
-                                                                .gatsbyImageData
+                                                                .src
                                                         )
                                                             ? "col-start-1 col-end-4"
                                                             : "col-start-1 col-end-5"
@@ -115,8 +115,7 @@ const SearchView = () => {
                                                     </p>
                                                 </div>
                                                 {Boolean(
-                                                    p.node.featuredImage
-                                                        .gatsbyImageData
+                                                    p.node.featuredImage.src
                                                 ) && (
                                                     <div className='col-start-4 col-end-5 text-right'>
                                                         <div

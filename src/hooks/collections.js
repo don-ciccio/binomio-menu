@@ -11,7 +11,7 @@ function useAllShopifyCollection() {
                             handle
                             image {
                                 altText
-                                gatsbyImageData
+                                src
                             }
                             shopifyId
                             title
