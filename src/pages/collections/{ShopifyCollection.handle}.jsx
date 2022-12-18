@@ -41,7 +41,7 @@ export const query = graphql`
                 handle
                 featuredImage {
                     altText
-                    src
+                    gatsbyImageData
                     src
                 }
                 priceRangeV2 {

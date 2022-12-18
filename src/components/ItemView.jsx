@@ -22,7 +22,7 @@ const ItemView = (props) => {
                             <div className='min-h-16 w-full p-4 grid grid-cols-4 hover:bg-gray-200 cursor-pointer'>
                                 <div
                                     className={
-                                        Boolean(i.featuredImage.src)
+                                        Boolean(i.featuredImage)
                                             ? "col-start-1 col-end-4"
                                             : "col-start-1 col-end-5"
                                     }
