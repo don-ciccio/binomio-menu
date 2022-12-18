@@ -33,7 +33,7 @@ const ProductPage = (props) => {
                     <img src='/arrow-left.svg' alt='Back' />
                 </button>
                 <div className='flex flex-col items-center mt-4 mb-4'>
-                    {Boolean(shopifyProduct.featuredImage.gatsbyImageData) && (
+                    {Boolean(shopifyProduct.featuredImage.src) && (
                         <div className='col-start-4 col-end-5 text-right'>
                             <div
                                 className='h-48 w-64 bg-cover rounded-lg inline-block'
