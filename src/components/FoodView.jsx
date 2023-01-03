@@ -80,7 +80,7 @@ const FoodView = (props) => {
                     );
                 })}
             </div>
-            {/* <div className='flex flex-col divide-y-2 divide-gray-300 divide-double'>
+            <div className='flex flex-col divide-y-2 divide-gray-300 divide-double'>
                 <h2 className='pl-4 font-bold text-3xl self-center block w-full mb-5'>
                     Bruschette
                 </h2>
@@ -144,7 +144,7 @@ const FoodView = (props) => {
                         </Link>
                     );
                 })}
-            </div> */}
+            </div>
             <div className='flex flex-col divide-y-2 divide-gray-300 divide-double'>
                 <h2 className='pl-4 font-bold text-3xl self-center block w-full mb-5'>
                     Hamburger
