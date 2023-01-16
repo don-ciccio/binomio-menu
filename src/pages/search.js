@@ -77,7 +77,6 @@ const SearchView = () => {
                                                     className={
                                                         Boolean(
                                                             p.node.featuredImage
-                                                                .src
                                                         )
                                                             ? "col-start-1 col-end-4"
                                                             : "col-start-1 col-end-5"
