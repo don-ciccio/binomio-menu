@@ -114,7 +114,7 @@ const SearchView = () => {
                                                     </p>
                                                 </div>
                                                 {Boolean(
-                                                    p.node.featuredImage.src
+                                                    p.node.featuredImage
                                                 ) && (
                                                     <div className='col-start-4 col-end-5 text-right'>
                                                         <div
