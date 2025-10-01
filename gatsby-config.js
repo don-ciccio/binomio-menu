@@ -24,6 +24,8 @@ module.exports = {
                 password: process.env.GATSBY_SHOPIFY_PASSWORD,
                 storeUrl: process.env.GATSBY_SHOPIFY_STORE_URL,
                 shopifyConnections: ["collections"],
+                // Add API version specification
+                apiVersion: "2023-04", // or whatever version your store supports
             },
         },
         {
